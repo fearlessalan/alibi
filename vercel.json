@@ -2,17 +2,18 @@
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.7.3"
-    },
-    "index.php": {
-      "runtime": "vercel-php@0.7.3"
-    },
-    "mes-alibis.php": {
-      "runtime": "vercel-php@0.7.3"
-    },
-    "classement.php": {
-      "runtime": "vercel-php@0.7.3"
     }
   },
+  "builds": [
+    {
+      "src": "*.php",
+      "use": "vercel-php@0.7.3"
+    },
+    {
+      "src": "api/*.php",
+      "use": "vercel-php@0.7.3"
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",

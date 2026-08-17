@@ -4,88 +4,95 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow flex flex-col items-center px-gutter py-lg max-w-container-max mx-auto w-full">
+<main class="flex-grow flex flex-col items-center max-w-container-max mx-auto w-full px-xl py-3xl">
 
-    <!-- Hero Section -->
-    <div class="text-center mb-xl w-full max-w-3xl">
-        <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-4 leading-tight">
+    <!-- Hero Band -->
+    <div class="text-center mb-3xl w-full max-w-3xl">
+        <p class="font-display font-medium text-[14px] text-ink uppercase tracking-[1px] mb-md">
+            GÉNÉRATEUR D'EXCUSES ET D'ALIBIS SUPRÊMES
+        </p>
+        <h1 class="font-display font-medium text-[40px] md:text-[56px] leading-[1.05] text-ink mb-lg">
             Échappez à tout. Instantanément.
         </h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        <p class="text-[20px] leading-[30px] text-body max-w-2xl mx-auto font-normal">
             Des mensonges générés par l'IA si crédibles que vous finirez par y croire. Promis, on ne juge pas.
         </p>
     </div>
 
-    <!-- Generator Card -->
-    <div class="w-full rounded-xl overflow-hidden flex flex-col md:flex-row relative z-10 bg-surface-container-lowest shadow-[0px_10px_30px_rgba(139,92,246,0.08)] border border-outline-variant/30">
+    <!-- Generator Card (card-content: bg canvas-soft, text ink, rounded-md 12px, padding xl) -->
+    <div class="w-full rounded-md overflow-hidden flex flex-col md:flex-row relative z-10 bg-canvas-soft border border-mute/30 shadow-sm">
         
         <!-- Left Side: Controls -->
-        <div class="w-full md:w-5/12 p-8 md:p-10 border-b md:border-b-0 md:border-r border-outline-variant/30 flex flex-col gap-6 relative z-10 bg-surface-container-low/30">
-            <h2 class="font-headline-md text-headline-md text-on-surface mb-2 flex items-center gap-2">
+        <div class="w-full md:w-5/12 p-xl md:p-3xl border-b md:border-b-0 md:border-r border-mute/30 flex flex-col gap-xl">
+            <h2 class="font-display font-medium text-[24px] text-ink flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary">tune</span>
                 Paramétrer le Chaos
             </h2>
 
             <!-- Target Dropdown & Subject Input -->
             <div class="flex flex-col gap-2">
-                <label for="subjectInput" class="font-label-caps text-label-caps text-on-surface-variant uppercase">LE SUJET DE L'EXCUSE</label>
-                <input id="subjectInput" type="text" class="w-full bg-surface-container border-none text-on-surface py-3 px-4 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none font-body-md shadow-inner transition-shadow" placeholder="Ex: Retard en réunion, Oubli d'anniversaire, Devoir..."/>
+                <label for="subjectInput" class="font-display font-medium text-[14px] text-ink uppercase tracking-[1px]">LE SUJET DE L'EXCUSE</label>
+                <!-- text-input -->
+                <input id="subjectInput" type="text" class="w-full bg-canvas border border-ink text-ink py-md px-lg rounded-sm focus:ring-2 focus:ring-primary focus:outline-none text-[16px]" placeholder="Ex: Retard en réunion, Oubli d'anniversaire, Devoir..."/>
             </div>
 
             <div class="flex flex-col gap-2">
-                <label for="targetSelect" class="font-label-caps text-label-caps text-on-surface-variant uppercase">À QUI MENT-ON ?</label>
+                <label for="targetSelect" class="font-display font-medium text-[14px] text-ink uppercase tracking-[1px]">À QUI MENT-ON ?</label>
                 <div class="relative">
-                    <select id="targetSelect" class="w-full appearance-none bg-surface-container border-none text-on-surface py-3 px-4 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none font-body-md shadow-inner transition-shadow pr-10">
+                    <select id="targetSelect" class="w-full appearance-none bg-canvas border border-ink text-ink py-md px-lg rounded-sm focus:ring-2 focus:ring-primary focus:outline-none text-[16px] pr-10">
                         <option value="Patron">Patron (Crédibilité maximale requise)</option>
                         <option value="Conjoint">Conjoint (Nécessite tact & surprise)</option>
                         <option value="Amis">Amis (Refus amical mais ferme)</option>
                         <option value="Professeur">Professeur (Historique technique flou)</option>
                     </select>
-                    <span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none">expand_more</span>
+                    <span class="material-symbols-outlined absolute right-3 top-3 text-body-mid pointer-events-none">expand_more</span>
                 </div>
             </div>
 
             <!-- Vibe Slider -->
-            <div class="flex flex-col gap-4 mt-2">
+            <div class="flex flex-col gap-md mt-2">
                 <div class="flex justify-between items-center">
-                    <label for="vibeRange" class="font-label-caps text-label-caps text-on-surface-variant uppercase">L'AMBIANCE (NIVEAU DE RISQUE)</label>
-                    <span id="vibeBadge" class="text-xs font-bold text-tertiary px-2 py-0.5 bg-tertiary-fixed rounded-md">Scandaleux (75%)</span>
+                    <label for="vibeRange" class="font-display font-medium text-[14px] text-ink uppercase tracking-[1px]">L'AMBIANCE (NIVEAU DE RISQUE)</label>
+                    <span id="vibeBadge" class="text-[14px] font-semibold text-ink px-md py-xs bg-canvas rounded-pill border border-mute/50">Scandaleux (75%)</span>
                 </div>
                 <input id="vibeRange" type="range" min="1" max="100" value="75"/>
-                <div class="flex justify-between text-xs text-outline-variant font-medium">
+                <div class="flex justify-between text-[14px] text-body-mid font-normal">
                     <span>Sobriété Pro</span>
                     <span>Équilibré</span>
-                    <span>Délirant / Absurde</span>
+                    <span>Délirant</span>
                 </div>
             </div>
 
-            <!-- Generate Button -->
-            <button id="generateBtn" class="mt-6 bg-primary text-on-primary py-4 px-6 rounded-xl font-headline-md text-[18px] font-bold bouncy-hover transition-all flex items-center justify-center gap-2 group w-full shadow-lg">
+            <!-- button-primary (Zapier Orange, rounded-md 12px) -->
+            <button id="generateBtn" class="mt-xl bg-primary text-on-primary py-md px-xl rounded-md font-semibold text-[18px] bouncy-hover transition-all flex items-center justify-center gap-2 group w-full shadow-sm hover:opacity-95">
                 <span id="magicIcon" class="material-symbols-outlined group-hover:scale-110 transition-transform duration-300">magic_button</span>
                 <span id="btnText">Invoquer l'Alibi</span>
             </button>
         </div>
 
         <!-- Right Side: Preview/Result -->
-        <div class="w-full md:w-7/12 p-8 md:p-10 relative z-10 flex flex-col justify-between min-h-[420px] bg-surface-container-lowest">
-            <div class="flex justify-between items-start mb-6">
-                <span class="text-outline-variant material-symbols-outlined text-[36px]">format_quote</span>
+        <div class="w-full md:w-7/12 p-xl md:p-3xl relative z-10 flex flex-col justify-between min-h-[420px] bg-canvas">
+            <div class="flex justify-between items-start mb-lg">
+                <span class="text-mute material-symbols-outlined text-[40px]">format_quote</span>
+                <span class="font-display font-medium text-[14px] text-ink tracking-[1px] uppercase bg-canvas-soft px-md py-xs rounded-pill border border-mute/30">Aperçu direct</span>
             </div>
 
             <!-- Excuse Text Display -->
-            <div class="flex-grow flex flex-col items-center justify-center py-6 px-2">
-                <p id="alibiText" class="typewriter text-[20px] md:text-[26px] leading-relaxed text-on-surface font-medium italic text-center max-w-xl">
+            <div class="flex-grow flex flex-col items-center justify-center py-xl px-2">
+                <p id="alibiText" class="text-[20px] md:text-[24px] leading-[32px] text-ink font-normal italic text-center max-w-xl">
                     "Je ne peux pas venir, je suis actuellement en train de négocier un traité de paix diplomatique entre mon grille-pain et mon micro-ondes."
                 </p>
             </div>
 
-            <!-- Actions -->
-            <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
-                <button id="copyAlibiBtn" class="flex-1 bg-surface-container hover:bg-surface-variant text-on-surface py-3 px-6 rounded-lg font-label-caps text-label-caps flex items-center justify-center gap-2 transition-all border border-outline-variant/50">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">content_copy</span>
+            <!-- Actions (button-tertiary & button-secondary) -->
+            <div class="flex flex-col sm:flex-row gap-xl mt-xl justify-center">
+                <!-- button-tertiary -->
+                <button id="copyAlibiBtn" class="flex-1 bg-canvas hover:bg-canvas-soft text-ink py-md px-xl rounded-md font-semibold text-[16px] flex items-center justify-center gap-2 transition-all border border-ink shadow-sm">
+                    <span class="material-symbols-outlined">content_copy</span>
                     <span>Copier l'Alibi</span>
                 </button>
-                <button id="saveAlibiBtn" class="flex-1 bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed py-3 px-6 rounded-lg font-label-caps text-label-caps flex items-center justify-center gap-2 transition-all border border-primary/20">
+                <!-- button-secondary -->
+                <button id="saveAlibiBtn" class="flex-1 bg-ink hover:bg-ink-soft text-on-primary py-md px-xl rounded-md font-semibold text-[16px] flex items-center justify-center gap-2 transition-all border border-ink shadow-sm">
                     <span class="material-symbols-outlined">bookmark_add</span>
                     <span>Sauvegarder</span>
                 </button>
@@ -173,13 +180,13 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.clipboard.writeText(textToCopy);
         
         const origContent = copyAlibiBtn.innerHTML;
-        copyAlibiBtn.className = "flex-1 bg-secondary-container text-on-secondary-container py-3 px-6 rounded-lg font-label-caps text-label-caps flex items-center justify-center gap-2 transition-all border border-secondary shadow-md";
-        copyAlibiBtn.innerHTML = `<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span><span>Sécurisé !</span>`;
+        copyAlibiBtn.className = "flex-1 bg-ink text-on-primary py-md px-xl rounded-md font-semibold text-[16px] flex items-center justify-center gap-2 transition-all shadow-sm";
+        copyAlibiBtn.innerHTML = `<span class="material-symbols-outlined">check_circle</span><span>Sécurisé !</span>`;
 
         showToast("Alibi copié dans le presse-papier !");
 
         setTimeout(() => {
-            copyAlibiBtn.className = "flex-1 bg-surface-container hover:bg-surface-variant text-on-surface py-3 px-6 rounded-lg font-label-caps text-label-caps flex items-center justify-center gap-2 transition-all border border-outline-variant/50";
+            copyAlibiBtn.className = "flex-1 bg-canvas hover:bg-canvas-soft text-ink py-md px-xl rounded-md font-semibold text-[16px] flex items-center justify-center gap-2 transition-all border border-ink shadow-sm";
             copyAlibiBtn.innerHTML = origContent;
         }, 2000);
     });

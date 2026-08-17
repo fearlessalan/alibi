@@ -13,10 +13,10 @@ if (!defined('CURRENT_PAGE')) {
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/logo min.svg"/>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter & Mona Sans for Display substitute -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mona+Sans:wght@500;600;700&display=swap" rel="stylesheet"/>
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
@@ -27,87 +27,42 @@ if (!defined('CURRENT_PAGE')) {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "on-tertiary-container": "#fffbff",
-                    "primary-fixed": "#e9ddff",
-                    "primary-fixed-dim": "#d0bcff",
-                    "on-secondary-fixed-variant": "#005236",
-                    "on-primary-container": "#fffbff",
-                    "secondary-fixed-dim": "#4edea3",
-                    "surface": "#0f0e17",
-                    "surface-tint": "#6d3bd7",
-                    "tertiary-container": "#c0488a",
-                    "outline": "#7b7486",
-                    "on-tertiary-fixed": "#3d0026",
-                    "on-primary": "#ffffff",
-                    "secondary": "#006c49",
-                    "on-secondary-fixed": "#002113",
-                    "surface-dim": "#151421",
-                    "error-container": "#ffdad6",
-                    "surface-variant": "#242235",
-                    "surface-container": "#1e1c2d",
-                    "on-tertiary-fixed-variant": "#85145a",
-                    "tertiary": "#a12e70",
-                    "tertiary-fixed": "#ffd8e7",
-                    "secondary-container": "#6cf8bb",
-                    "on-primary-fixed-variant": "#5516be",
-                    "on-error-container": "#93000a",
-                    "on-error": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "on-surface": "#fffffe",
-                    "error": "#ba1a1a",
-                    "inverse-surface": "#fcf8ff",
-                    "primary": "#8455ef",
-                    "secondary-fixed": "#6ffbbe",
-                    "on-background": "#fffffe",
-                    "surface-container-low": "#181625",
-                    "on-secondary-container": "#00714d",
-                    "outline-variant": "#39354a",
-                    "surface-bright": "#1e1c2d",
-                    "background": "#0f0e17",
-                    "surface-container-lowest": "#151421",
-                    "surface-container-highest": "#28253b",
-                    "inverse-on-surface": "#1b1b25",
-                    "tertiary-fixed-dim": "#ffafd3",
-                    "inverse-primary": "#d0bcff",
-                    "on-primary-fixed": "#ffffff",
-                    "surface-container-high": "#232035",
-                    "primary-container": "#8455ef",
-                    "on-surface-variant": "#494454"
+            colors: {
+              primary: "#ff4f00", // Zapier Orange
+              "on-primary": "#fffefb",
+              canvas: "#fffefb", // Warm Off-White
+              "canvas-soft": "#f8f4f0", // Cream-tinted soft surface
+              ink: "#201515", // Deep Coffee Ink
+              "ink-soft": "#2f2a26",
+              "ink-mid": "#36342e",
+              body: "#605d52",
+              "body-mid": "#939084",
+              mute: "#c5c0b1",
+              error: "#dc2626",
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            borderRadius: {
+              none: "0px",
+              sm: "6px",
+              md: "12px", // Brand Canonical Radius
+              pill: "9999px",
+              full: "9999px",
             },
-            "spacing": {
-                    "lg": "40px",
-                    "base": "4px",
-                    "xl": "64px",
-                    "md": "24px",
-                    "sm": "16px",
-                    "container-max": "1200px",
-                    "xs": "8px",
-                    "gutter": "20px"
+            spacing: {
+              xxs: "2px",
+              xs: "4px",
+              sm: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "24px",
+              "2xl": "32px",
+              "3xl": "48px",
+              "4xl": "64px",
+              "container-max": "1280px",
             },
-            "fontFamily": {
-                    "display-lg-mobile": ["Plus Jakarta Sans"],
-                    "headline-md": ["Plus Jakarta Sans"],
-                    "display-lg": ["Plus Jakarta Sans"],
-                    "label-caps": ["JetBrains Mono"],
-                    "body-lg": ["Hanken Grotesk"],
-                    "body-md": ["Hanken Grotesk"]
+            fontFamily: {
+              display: ["'Mona Sans'", "'Inter'", "sans-serif"],
+              sans: ["'Inter'", "sans-serif"],
             },
-            "fontSize": {
-                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
-                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-            }
           }
         }
       }
@@ -119,15 +74,6 @@ if (!defined('CURRENT_PAGE')) {
         .icon-fill {
           font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .glass-panel {
-            background: rgba(30, 28, 45, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .typewriter {
-            font-family: 'JetBrains Mono', monospace;
-        }
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
@@ -138,11 +84,11 @@ if (!defined('CURRENT_PAGE')) {
             height: 24px;
             width: 24px;
             border-radius: 50%;
-            background: #ffffff;
+            background: #ff4f00;
             cursor: pointer;
             margin-top: -8px;
-            /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
-            border: 2px solid #6b38d4;
+            border: 2px solid #fffefb;
+            box-shadow: 0 2px 4px rgba(32, 21, 21, 0.15);
             transition: transform 0.15s ease;
         }
         input[type=range]::-webkit-slider-thumb:hover {
@@ -152,55 +98,49 @@ if (!defined('CURRENT_PAGE')) {
             width: 100%;
             height: 8px;
             cursor: pointer;
-            background: linear-gradient(to right, #6cf8bb, #8455ef, #ffdad6);
-            border-radius: 4px;
+            background: linear-gradient(to right, #c5c0b1, #ff4f00);
+            border-radius: 6px;
         }
         .bouncy-hover {
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .bouncy-hover:hover {
             transform: translateY(-2px);
-            /* box-shadow: 0 12px 24px -6px rgba(107, 56, 212, 0.25); */
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md antialiased overflow-x-hidden selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<body class="bg-canvas text-ink min-h-screen flex flex-col font-sans antialiased selection:bg-primary selection:text-on-primary">
 
-<!-- TopNavBar -->
-<nav class="w-full top-0 sticky shadow-sm bg-surface/80 backdrop-blur-md z-50">
-    <div class="flex justify-between items-center max-w-container-max mx-auto px-md py-sm">
+<!-- Nav-bar (sticky top nav: background canvas, text ink, padding md xl) -->
+<nav class="w-full top-0 sticky bg-canvas/90 backdrop-blur-md z-50 border-b border-canvas-soft">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-xl py-md">
         <!-- Brand -->
-        <a href="index.php" class="flex items-center cursor-pointer active:scale-95 transition-transform">
-            <img src="assets/logo.svg" alt="Alibi.com" class="h-10 w-auto object-contain" />
+        <a href="index.php" class="flex items-center cursor-pointer active:scale-95 transition-transform gap-2">
+            <img src="assets/logo.svg" alt="Alibi.com" class="h-9 w-auto object-contain" />
         </a>
 
         <!-- Nav Links (Desktop) -->
-        <div class="hidden md:flex items-center gap-md">
-            <a class="<?php echo CURRENT_PAGE === 'labo' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-body-md hover:text-primary'; ?> hover:scale-105 transition-transform duration-200" href="index.php">Labo du Chaos</a>
-            <a class="<?php echo CURRENT_PAGE === 'alibis' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-body-md hover:text-primary'; ?> hover:scale-105 transition-transform duration-200" href="mes-alibis.php">Mes Alibis</a>
-            <a class="<?php echo CURRENT_PAGE === 'classement' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-body-md hover:text-primary'; ?> hover:scale-105 transition-transform duration-200" href="classement.php">Classement</a>
+        <div class="hidden md:flex items-center gap-xl">
+            <a class="<?php echo CURRENT_PAGE === 'labo' ? 'text-ink font-bold border-b-2 border-primary pb-1' : 'text-body hover:text-ink font-medium'; ?> transition-colors" href="index.php">Labo du Chaos</a>
+            <a class="<?php echo CURRENT_PAGE === 'alibis' ? 'text-ink font-bold border-b-2 border-primary pb-1' : 'text-body hover:text-ink font-medium'; ?> transition-colors" href="mes-alibis.php">Mes Alibis</a>
+            <a class="<?php echo CURRENT_PAGE === 'classement' ? 'text-ink font-bold border-b-2 border-primary pb-1' : 'text-body hover:text-ink font-medium'; ?> transition-colors" href="classement.php">Classement</a>
         </div>
 
-        <!-- Action -->
-        <button id="premiumBtn" class="hidden md:flex bg-primary text-on-primary px-sm py-xs rounded-lg font-bold hover:-translate-y-[2px] hover:shadow-[0px_10px_30px_rgba(139,92,246,0.2)] transition-all">
-            Passer Premium
-        </button>
-
         <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuToggle" class="md:hidden text-primary p-xs rounded-md hover:bg-surface-variant">
+        <button id="mobileMenuToggle" class="md:hidden text-ink p-sm rounded-md hover:bg-canvas-soft">
             <span class="material-symbols-outlined text-[28px]">menu</span>
         </button>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-surface-container border-b border-outline-variant px-md py-sm flex flex-col gap-sm">
-        <a class="text-on-surface py-2 font-bold flex items-center gap-2" href="index.php">
+    <div id="mobileMenu" class="hidden md:hidden bg-canvas-soft border-b border-mute/30 px-xl py-lg flex flex-col gap-md">
+        <a class="text-ink py-1 font-semibold flex items-center gap-2" href="index.php">
             <span class="material-symbols-outlined">science</span> Labo du Chaos
         </a>
-        <a class="text-on-surface py-2 font-bold flex items-center gap-2" href="mes-alibis.php">
+        <a class="text-ink py-1 font-semibold flex items-center gap-2" href="mes-alibis.php">
             <span class="material-symbols-outlined">bookmark</span> Mes Alibis
         </a>
-        <a class="text-on-surface py-2 font-bold flex items-center gap-2" href="classement.php">
+        <a class="text-ink py-1 font-semibold flex items-center gap-2" href="classement.php">
             <span class="material-symbols-outlined">leaderboard</span> Classement
         </a>
     </div>

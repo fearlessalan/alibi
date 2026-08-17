@@ -4,41 +4,44 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow max-w-container-max mx-auto w-full px-gutter md:px-md py-xl">
+<main class="flex-grow max-w-container-max mx-auto w-full px-xl py-3xl">
     
-    <!-- Header -->
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-lg gap-sm">
+    <!-- Header Band -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-3xl gap-xl">
         <div>
-            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-xs">
+            <p class="font-display font-medium text-[14px] text-ink uppercase tracking-[1px] mb-xs">
+                VOS ESQUIVES ENREGISTRÉES
+            </p>
+            <h1 class="font-display font-medium text-[40px] md:text-[48px] text-ink mb-xs">
                 Archives du Crime Parfait
             </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant">
+            <p class="text-[18px] text-body">
                 Retrouvez et réutilisez vos meilleures esquives. Promis, on ne dira rien.
             </p>
         </div>
         
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-xs bg-surface-container p-1 rounded-full border border-outline-variant/30">
-            <button data-filter="all" class="filter-btn active-filter px-sm py-xs rounded-full text-xs font-bold transition-all bg-primary text-on-primary shadow-sm">
+        <!-- Filter Tabs (badge-pill style) -->
+        <div class="flex flex-wrap items-center gap-xs bg-canvas-soft p-1.5 rounded-pill border border-mute/30">
+            <button data-filter="all" class="filter-btn active-filter px-lg py-xs rounded-pill text-[14px] font-semibold transition-all bg-primary text-on-primary shadow-sm">
                 Tous
             </button>
-            <button data-filter="Patron" class="filter-btn px-sm py-xs rounded-full text-xs font-bold text-on-surface-variant hover:text-primary transition-all">
+            <button data-filter="Patron" class="filter-btn px-lg py-xs rounded-pill text-[14px] font-medium text-body hover:text-ink transition-all">
                 Patron
             </button>
-            <button data-filter="Conjoint" class="filter-btn px-sm py-xs rounded-full text-xs font-bold text-on-surface-variant hover:text-primary transition-all">
+            <button data-filter="Conjoint" class="filter-btn px-lg py-xs rounded-pill text-[14px] font-medium text-body hover:text-ink transition-all">
                 Conjoint
             </button>
-            <button data-filter="Amis" class="filter-btn px-sm py-xs rounded-full text-xs font-bold text-on-surface-variant hover:text-primary transition-all">
+            <button data-filter="Amis" class="filter-btn px-lg py-xs rounded-pill text-[14px] font-medium text-body hover:text-ink transition-all">
                 Amis
             </button>
-            <button data-filter="Professeur" class="filter-btn px-sm py-xs rounded-full text-xs font-bold text-on-surface-variant hover:text-primary transition-all">
+            <button data-filter="Professeur" class="filter-btn px-lg py-xs rounded-pill text-[14px] font-medium text-body hover:text-ink transition-all">
                 Professeur
             </button>
         </div>
     </div>
 
     <!-- Alibi Grid Container -->
-    <div id="alibiGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+    <div id="alibiGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
         <!-- Rempli dynamiquement par JS -->
     </div>
 
@@ -81,25 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
         filtered.forEach(alibi => {
             const icon = targetIcons[alibi.target] || 'star';
             const card = document.createElement('div');
-            card.className = "bg-surface-container-lowest rounded-xl p-md flex flex-col shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group border border-outline-variant/20";
+            // card-content (Zapier cream card): bg-canvas-soft, text-ink, padding xl (24px), rounded-md (12px)
+            card.className = "bg-canvas-soft rounded-md p-xl flex flex-col border border-mute/30 hover:border-ink/40 transition-all duration-200 group shadow-sm";
             
             card.innerHTML = `
-                <div class="flex justify-between items-start mb-sm">
-                    <div class="flex gap-xs items-center bg-surface-variant px-2.5 py-1 rounded-md text-label-caps font-label-caps text-on-surface-variant">
-                        <span class="material-symbols-outlined text-[16px]">${icon}</span>
+                <div class="flex justify-between items-start mb-md">
+                    <div class="flex gap-xs items-center bg-canvas px-md py-xs rounded-pill text-[14px] font-medium text-ink border border-mute/30">
+                        <span class="material-symbols-outlined text-[16px] text-primary">${icon}</span>
                         Cible : ${alibi.target}
                     </div>
-                    <span class="text-label-caps font-label-caps text-outline">${alibi.date || 'Récents'}</span>
+                    <span class="text-[14px] text-body-mid">${alibi.date || 'Récents'}</span>
                 </div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-xs">${alibi.subject}</h3>
-                <p class="font-body-lg text-body-lg text-on-surface mb-md flex-grow italic">
+                <h3 class="font-display font-medium text-[20px] text-ink mb-sm">${alibi.subject}</h3>
+                <p class="text-[16px] leading-[24px] text-body mb-xl flex-grow italic">
                     "${alibi.text}"
                 </p>
-                <div class="flex justify-between items-center border-t border-outline-variant/40 pt-sm mt-auto">
-                    <button class="delete-btn text-error hover:bg-error-container p-2 rounded-full transition-colors flex items-center justify-center opacity-70 group-hover:opacity-100" data-id="${alibi.id}">
+                <div class="flex justify-between items-center border-t border-mute/30 pt-md mt-auto">
+                    <button class="delete-btn text-body hover:text-error p-xs rounded-sm transition-colors flex items-center justify-center" data-id="${alibi.id}">
                         <span class="material-symbols-outlined">delete</span>
                     </button>
-                    <button class="copy-btn flex items-center gap-xs bg-primary-fixed text-on-primary-fixed hover:bg-primary-fixed-dim px-sm py-2 rounded-lg font-bold transition-colors" data-text="${alibi.text.replace(/"/g, '&quot;')}">
+                    <button class="copy-btn flex items-center gap-xs bg-ink text-on-primary hover:bg-ink-soft px-lg py-sm rounded-md font-semibold text-[14px] transition-colors" data-text="${alibi.text.replace(/"/g, '&quot;')}">
                         <span class="material-symbols-outlined text-[18px]">content_copy</span>
                         <span>Copier</span>
                     </button>
@@ -111,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajouter la carte d'ajout "Besoin d'un nouveau mensonge ?"
         const addCard = document.createElement('a');
         addCard.href = "index.php";
-        addCard.className = "bg-surface-container-low border-2 border-dashed border-outline-variant rounded-xl p-md flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container hover:border-primary transition-all duration-300 min-h-[260px] group";
+        addCard.className = "bg-canvas border-2 border-dashed border-mute/60 rounded-md p-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-canvas-soft hover:border-primary transition-all duration-200 min-h-[260px] group";
         addCard.innerHTML = `
-            <div class="bg-primary-fixed p-3 rounded-full text-on-primary-fixed mb-sm group-hover:scale-105 transition-transform">
+            <div class="bg-canvas-soft p-md rounded-full text-primary mb-md group-hover:scale-105 transition-transform border border-mute/30">
                 <span class="material-symbols-outlined text-[32px]">add_reaction</span>
             </div>
-            <h3 class="font-headline-md text-[20px] font-bold text-primary mb-xs">Besoin d'un nouveau mensonge ?</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Retournez au Labo du Chaos pour générer une nouvelle esquive magistrale.</p>
+            <h3 class="font-display font-medium text-[20px] text-ink mb-xs">Besoin d'un nouveau mensonge ?</h3>
+            <p class="text-[16px] text-body">Retournez au Labo du Chaos pour générer une nouvelle esquive magistrale.</p>
         `;
         alibiGrid.appendChild(addCard);
 
@@ -161,11 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => {
-                b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
-                b.classList.add('text-on-surface-variant');
+                b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+                b.classList.add('text-body', 'font-medium');
             });
-            btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
-            btn.classList.remove('text-on-surface-variant');
+            btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+            btn.classList.remove('text-body', 'font-medium');
             renderAlibis(btn.getAttribute('data-filter'));
         });
     });

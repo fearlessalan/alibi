@@ -3,7 +3,13 @@
     "api/*.php": {
       "runtime": "vercel-php@0.7.3"
     },
-    "*.php": {
+    "index.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "mes-alibis.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "classement.php": {
       "runtime": "vercel-php@0.7.3"
     }
   },

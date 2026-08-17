@@ -1,4 +1,6 @@
-![logo](assets/logo.svg)
+<p align="center">
+  <img src="assets/logo.svg" alt="logo" width="300" style="background: #dccbcbff; padding: 20px; border-radius: 12px;" />
+</p>
 
 # Alibi Genie (Alibi.com)
 

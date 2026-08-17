@@ -1,5 +1,14 @@
 [
     {
+        "id": "alibi_6a83301413dde",
+        "subject": "oublie de reviser l'examen",
+        "target": "Professeur",
+        "vibe": 75,
+        "text": "Monsieur, je n'ai pas pu réviser car mon chat, convaincu d'être la réincarnation de Napoléon, a séquestré mes notes de révision sous le canapé en décrétant un blocus économique. J'ai dû négocier la libération des feuillets à coups de croquettes diplomatiques, ce qui m'a malheureusement pris toute la nuit.",
+        "date": "Aujourd'hui",
+        "timestamp": 1786982420
+    },
+    {
         "id": "alibi_6a832036a1dac",
         "subject": "J'ai couche avec la voisine",
         "target": "Conjoint",

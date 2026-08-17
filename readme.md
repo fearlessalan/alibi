@@ -1,94 +1,19 @@
-# 🎭 Alibi Genie — Le Générateur d'Alibis Incontestables
-
 ![logo](assets/logo.svg)
 
-**Alibi Genie** (Alibi.com) est une application web moderne et élégante permettant de générer des alibis sur-mesure, crédibles et loufoques pour esquiver n'importe quelle situation délicate (réunions ennuyeuses, repas de famille, retards au travail, etc.).
+# Alibi Genie (Alibi.com)
 
----
+Ce projet est né d'une petite aventure technique dans le cadre d'un travail pratique de programmation web en PHP. L'idée de départ était simple : repousser mes compétences en développement web backend et frontend à travers une application complète et dynamique, tout en créant un outil décalé pour générer des excuses improbables et piéger mes amis.
 
-## 🎨 Design System & Direction Artistique (Zapier Specs)
+Au fil de la conception, j'ai voulu faire d'Alibi.com un véritable générateur d'alibis interactif capable d'adapter ses scénarios selon le niveau de gravité ou de crédibilité souhaité, avec la possibilité de fabriquer de fausses preuves justificatives. Côté données, j'ai fait le choix d'une architecture légère et directe, sans base de données lourde : la persistance repose sur un simple fichier JSON côté serveur couplé au localStorage du navigateur(pas encore implémenté lol) pour gérer l'historique et le classement.
 
-L'interface s'appuie sur une palette de couleurs aux tons neutres et chauds, associée à une typographie soignée et un système de composants harmonieux.
+## Lancement du projet
 
-### 1. Palette de Couleurs (`tailwind.config`)
+Pour tester l'application en local avec le serveur PHP intégré, il suffit d'exécuter la commande suivante à la racine du dossier :
 
-- **Canvas Principal (`canvas`)** : `#fffefb` — Crème très léger (fond principal).
-- **Canvas Soft (`canvas-soft`)** : `#f8f4f0` — Crème doux pour les cartes de contenu et conteneurs.
-- **Coffee Ink (`ink`)** : `#201515` — Noir café profond pour les textes principaux, les titres et le header/footer.
-- **Zapier Orange (`primary`)** : `#ff4f00` — Orange saturé réservé exclusivement aux cibles de conversion et boutons CTA principaux.
-- **Échelle Neutre Chaude** : `body` (`#605d52`), `body-mid` (`#939084`), et `mute` (`#c5c0b1`).
-
-### 2. Typographie à Deux Voix
-
-- **Headlines / Display** : **Mona Sans** (`font-display`) à graisse medium/semibold avec tracking d'en-tête (eyebrow).
-- **Textes Courants & UI** : **Inter** (`font-sans`) pour tout le reste (corps de texte, boutons, formulaires, filtres).
-
-### 3. Formes & Composants
-
-- **Border Radius Signature (`rounded-md`)** : `12px` appliqué universellement aux cartes (`card-content`), conteneurs et boutons (`button-primary`, `button-secondary`).
-- **Badges & Filtres (`badge-pill`)** : Formes en pilule (`rounded-full`) pour la sélection et l'état des filtres d'archives.
-
----
-
-## 🚀 Fonctionnalités Principales
-
-1. **Le Labo du Chaos (`index.php`)** :
-   - Générateur d'alibis instantanés par thématiques (Travail, Amour, Famille, Soirée, Retard).
-   - Curseurs interactifs pour régler le **Niveau de Gravité** et le **Degré de Crédibilité**.
-   - Option de génération d'**Éléments de Preuve** synthétiques (capture SMS, e-mail fictif, ticket de caisse).
-   - Copie en un clic avec retour visuel dynamique et notification Toast Zapier.
-
-2. **Archives des Alibis (`mes-alibis.php`)** :
-   - Historique des alibis générés avec filtrage dynamique par catégorie.
-   - Indication du niveau d'improbabilité et des preuves associées sous forme de cartes structurées (`card-content`).
-
-3. **Leaderboard Officiel (`classement.php`)** :
-   - Classement des "Maitres Génies de l'Esquive".
-   - Affichage dynamique des scores de créativité sous forme de rangs épurés.
-
----
-
-## 🛠️ Architecture du Projet
-
-```text
-alibi/
-├── api/
-│   ├── generate-alibi.php   # API de génération d'alibis
-│   ├── get-alibis.php       # API de récupération de l'historique
-│   └── leaderboard.php      # API du classement des génies
-├── assets/
-│   ├── logo.svg             # Logo principal aux couleurs Zapier (#ff4f00 / #201515)
-│   └── logo min.svg         # Emblème SVG épuré
-├── data/
-│   └── leaderboard.json     # Données JSON des utilisateurs du classement
-├── includes/
-│   ├── header.php           # En-tête global, CDN Tailwind avec tokens Zapier & Fonts
-│   └── footer.php           # Pied de page sombre Coffee-Ink et système Toast JS
-├── index.php                # Page d'accueil / Générateur interactif
-├── mes-alibis.php           # Page d'historique des alibis
-├── classement.php           # Page du classement officiel
-└── readme.md                # Documentation du projet
+```bash
+php -S localhost:8000
 ```
 
----
+Il ne reste plus qu'à ouvrir `http://localhost:8000` dans votre navigateur pour commencer à générer vos premières esquives.
 
-## ⚡ Installation & Utilisation Locale
-
-1. **Prérequis** :
-   - Un serveur Web avec support **PHP 7.4+** (ou supérieur), par exemple Apache / Nginx ou via un environnement local comme WampServer, XAMPP, Laragon, ou le serveur PHP intégré.
-
-2. **Lancement via le serveur PHP intégré** :
-
-   ```bash
-   cd /chemin/vers/alibi
-   php -S localhost:8000
-   ```
-
-3. **Accès Web** :
-   Ouvrez votre navigateur sur `http://localhost:8000`.
-
----
-
-## 📄 Licence
-
-Projet développé à des fins de démonstration et d'exploration UX/UI. Tous droits réservés.
+Si le projet vous plaît et que vous avez envie d'ajouter de nouvelles idées de scénarios, d'améliorer le code ou d'imaginer des fonctionnalités encore plus folles, n'hésitez pas à contribuer, ça serait vraiment chouette de continuer l'aventure et de se marrer ensemble ! 😉

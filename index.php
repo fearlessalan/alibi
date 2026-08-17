@@ -61,7 +61,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Generate Button -->
             <button id="generateBtn" class="mt-6 bg-primary text-on-primary py-4 px-6 rounded-xl font-headline-md text-[18px] font-bold bouncy-hover transition-all flex items-center justify-center gap-2 group w-full shadow-lg">
-                <span id="magicIcon" class="material-symbols-outlined group-hover:rotate-180 transition-transform duration-500">magic_button</span>
+                <span id="magicIcon" class="material-symbols-outlined group-hover:scale-110 transition-transform duration-300">magic_button</span>
                 <span id="btnText">Invoquer l'Alibi</span>
             </button>
         </div>

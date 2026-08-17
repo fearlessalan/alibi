@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filtered.forEach(alibi => {
             const icon = targetIcons[alibi.target] || 'star';
             const card = document.createElement('div');
-            card.className = "bg-surface-container-lowest rounded-xl p-md flex flex-col shadow-[0px_10px_30px_rgba(139,92,246,0.08)] hover:-rotate-1 hover:scale-[1.02] transition-all duration-300 group border border-outline-variant/20";
+            card.className = "bg-surface-container-lowest rounded-xl p-md flex flex-col shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group border border-outline-variant/20";
             
             card.innerHTML = `
                 <div class="flex justify-between items-start mb-sm">
@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajouter la carte d'ajout "Besoin d'un nouveau mensonge ?"
         const addCard = document.createElement('a');
         addCard.href = "index.php";
-        addCard.className = "bg-surface-container-low border-2 border-dashed border-outline-variant rounded-xl p-md flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container hover:border-primary transition-colors min-h-[260px] group";
+        addCard.className = "bg-surface-container-low border-2 border-dashed border-outline-variant rounded-xl p-md flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container hover:border-primary transition-all duration-300 min-h-[260px] group";
         addCard.innerHTML = `
-            <div class="bg-primary-fixed p-3 rounded-full text-on-primary-fixed mb-sm group-hover:scale-110 group-hover:rotate-12 transition-transform">
+            <div class="bg-primary-fixed p-3 rounded-full text-on-primary-fixed mb-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[32px]">add_reaction</span>
             </div>
             <h3 class="font-headline-md text-[20px] font-bold text-primary mb-xs">Besoin d'un nouveau mensonge ?</h3>

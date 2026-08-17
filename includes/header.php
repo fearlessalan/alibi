@@ -34,7 +34,7 @@ if (!defined('CURRENT_PAGE')) {
                     "on-secondary-fixed-variant": "#005236",
                     "on-primary-container": "#fffbff",
                     "secondary-fixed-dim": "#4edea3",
-                    "surface": "#fcf8ff",
+                    "surface": "#0f0e17",
                     "surface-tint": "#6d3bd7",
                     "tertiary-container": "#c0488a",
                     "outline": "#7b7486",
@@ -42,10 +42,10 @@ if (!defined('CURRENT_PAGE')) {
                     "on-primary": "#ffffff",
                     "secondary": "#006c49",
                     "on-secondary-fixed": "#002113",
-                    "surface-dim": "#dbd8e7",
+                    "surface-dim": "#151421",
                     "error-container": "#ffdad6",
-                    "surface-variant": "#e3e1ef",
-                    "surface-container": "#efecfb",
+                    "surface-variant": "#242235",
+                    "surface-container": "#1e1c2d",
                     "on-tertiary-fixed-variant": "#85145a",
                     "tertiary": "#a12e70",
                     "tertiary-fixed": "#ffd8e7",
@@ -55,24 +55,24 @@ if (!defined('CURRENT_PAGE')) {
                     "on-error": "#ffffff",
                     "on-secondary": "#ffffff",
                     "on-tertiary": "#ffffff",
-                    "on-surface": "#1b1b25",
+                    "on-surface": "#fffffe",
                     "error": "#ba1a1a",
-                    "inverse-surface": "#302f3a",
-                    "primary": "#6b38d4",
+                    "inverse-surface": "#fcf8ff",
+                    "primary": "#8455ef",
                     "secondary-fixed": "#6ffbbe",
-                    "on-background": "#1b1b25",
-                    "surface-container-low": "#f5f2ff",
+                    "on-background": "#fffffe",
+                    "surface-container-low": "#181625",
                     "on-secondary-container": "#00714d",
-                    "outline-variant": "#cbc3d7",
-                    "surface-bright": "#fcf8ff",
-                    "background": "#fcf8ff",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-container-highest": "#e3e1ef",
-                    "inverse-on-surface": "#f2effe",
+                    "outline-variant": "#39354a",
+                    "surface-bright": "#1e1c2d",
+                    "background": "#0f0e17",
+                    "surface-container-lowest": "#151421",
+                    "surface-container-highest": "#28253b",
+                    "inverse-on-surface": "#1b1b25",
                     "tertiary-fixed-dim": "#ffafd3",
                     "inverse-primary": "#d0bcff",
-                    "on-primary-fixed": "#23005c",
-                    "surface-container-high": "#e9e6f5",
+                    "on-primary-fixed": "#ffffff",
+                    "surface-container-high": "#232035",
                     "primary-container": "#8455ef",
                     "on-surface-variant": "#494454"
             },
@@ -120,10 +120,10 @@ if (!defined('CURRENT_PAGE')) {
           font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(30, 28, 45, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .typewriter {
             font-family: 'JetBrains Mono', monospace;
@@ -141,7 +141,7 @@ if (!defined('CURRENT_PAGE')) {
             background: #ffffff;
             cursor: pointer;
             margin-top: -8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
             border: 2px solid #6b38d4;
             transition: transform 0.15s ease;
         }
@@ -155,9 +155,12 @@ if (!defined('CURRENT_PAGE')) {
             background: linear-gradient(to right, #6cf8bb, #8455ef, #ffdad6);
             border-radius: 4px;
         }
+        .bouncy-hover {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         .bouncy-hover:hover {
-            transform: translateY(-2px) rotate(-0.5deg);
-            box-shadow: 0 10px 25px -5px rgba(107, 56, 212, 0.4);
+            transform: translateY(-2px);
+            /* box-shadow: 0 12px 24px -6px rgba(107, 56, 212, 0.25); */
         }
     </style>
 </head>

@@ -1,0 +1,56 @@
+[
+    {
+        "id": "alibi_6a83053643b8a",
+        "subject": "Retard de remise de TP",
+        "target": "Professeur",
+        "vibe": 46,
+        "text": "Mon TP a mystérieusement disparu de mon disque dur suite à une mise à jour nocturne de mon chat, qui a visiblement décidé de réécrire ma conclusion en langage félin. J'ai dû tout retraduire, mais rassurez-vous, le nouveau chapitre sur les ronronnements quantiques est fascinant.",
+        "date": "Aujourd'hui",
+        "timestamp": 1786971446
+    },
+    {
+        "id": "alibi_6a8304d309347",
+        "subject": "retard a l'accouchment de ma fille",
+        "target": "Conjoint",
+        "vibe": 52,
+        "text": "Chéri, ne panique pas, notre fille a décidé de négocier sa sortie avec un agent immobilier de la CAF et la sage-femme est coincée dans un ascenseur avec un lama. J'arrive dès qu'ils signent le compromis de vente !",
+        "date": "Aujourd'hui",
+        "timestamp": 1786971347
+    },
+    {
+        "id": "alibi_1",
+        "subject": "Retard au Bureau",
+        "target": "Patron",
+        "vibe": 75,
+        "text": "Mon chat a avalé mes clés de voiture en jouant, on est actuellement aux urgences vétérinaires pour une extraction d'urgence.",
+        "date": "Aujourd'hui",
+        "timestamp": 1786969184
+    },
+    {
+        "id": "alibi_2",
+        "subject": "Oubli Anniversaire",
+        "target": "Conjoint",
+        "vibe": 85,
+        "text": "Je préparais une surprise tellement énorme en coulisses que j'ai dû feindre l'oubli total pour ne pas éveiller tes soupçons. Surprise reportée pour des raisons logistiques.",
+        "date": "Hier",
+        "timestamp": 1786882784
+    },
+    {
+        "id": "alibi_3",
+        "subject": "Annulation Soirée",
+        "target": "Amis",
+        "vibe": 60,
+        "text": "Une fuite d'eau massive chez le voisin du dessus menace mon plafond, je dois rester écoper avec des casseroles en attendant le plombier.",
+        "date": "Lun. 12 Oct",
+        "timestamp": 1786796384
+    },
+    {
+        "id": "alibi_4",
+        "subject": "Devoir Non Rendu",
+        "target": "Professeur",
+        "vibe": 90,
+        "text": "Une mise à jour forcée de Windows a redémarré mon PC et corrompu le secteur de boot exactement au moment où j'allais cliquer sur 'Envoyer'.",
+        "date": "Semaine Dernière",
+        "timestamp": 1786364384
+    }
+]

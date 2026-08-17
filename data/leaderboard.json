@@ -1,0 +1,44 @@
+[
+    {
+        "rank": 1,
+        "name": "Chrs",
+        "title": "Légende",
+        "score": "9,850",
+        "avatar": "https:\/\/images.unsplash.com\/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+        "rank": 2,
+        "name": "TDC",
+        "title": "Expert",
+        "score": "8,420",
+        "avatar": "https:\/\/images.unsplash.com\/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+        "rank": 3,
+        "name": "Moses",
+        "title": "Vétéran",
+        "score": "7,600",
+        "avatar": "https:\/\/images.unsplash.com\/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+        "rank": 4,
+        "name": "Doubtlesss",
+        "title": "Initié",
+        "score": "6,540",
+        "initial": "D"
+    },
+    {
+        "rank": 5,
+        "name": "Cauchy",
+        "title": "Initié",
+        "score": "5,000",
+        "initial": "C"
+    },
+    {
+        "rank": 6,
+        "name": "Bralima`",
+        "title": "Apprenti",
+        "score": "5,900",
+        "initial": "B"
+    }
+]
